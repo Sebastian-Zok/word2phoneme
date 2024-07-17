@@ -1,0 +1,46 @@
+export const phoneFitsLetter = (phone: string, letter: string): boolean => {
+
+    const phone2LetterMap = {
+        'AA': ['a', 'aa', 'ai', 'au', 'eigh', 'er', 'et', 'ei', 'ae'],
+        'AE': ['a', 'aa', 'ai', 'au', 'eigh', 'er', 'et', 'ei', 'ae'],
+        'AH': ['a', 'aa', 'ai', 'au', 'eigh', 'er', 'et', 'ei', 'ae'],
+        'AO': ['a', 'aa', 'ai', 'au', 'eigh', 'er', 'et', 'ei', 'ae'],
+        'AW': ['a', 'aa', 'ai', 'au', 'eigh', 'er', 'et', 'ei', 'ae'],
+        'AY': ['a', 'aa', 'ai', 'au', 'eigh', 'er', 'et', 'ei', 'ae'],
+        'B': ['b', 'bb'],
+        'CH': ['ch', 'tch', 'tu', 'ti', 'te', 'tt', 'ts'],
+        'D': ['d', 'dd', 'ed'],
+        'DH': ['th', 'the', 'tha', 'tho', 'thy'],
+        'EH': ['e', 'ea', 'ee', 'ei', 'ey', 'eo', 'ay', 'oe'],
+        'ER': ['er', 'ear', 'ir', 'ur', 'or', 'our', 'yr'],
+        'EY': ['e', 'ea', 'ee', 'ei', 'ey', 'eo', 'ay', 'oe'],
+        "F": ['f', 'ff', 'ph', 'gh', 'lf', 'ft'],
+        "G": ['g', 'gg', 'gh', 'gu', 'gue'],
+        "HH": ['h', 'wh'],
+        "IH": ['i', 'y', 'e', 'u', 'o', 'ui', 'ie'],
+        "IY": ['i', 'y', 'e', 'u', 'o', 'ui', 'ie'],
+        "JH": ['j', 'ge', 'g', 'dge', 'di', 'gg'],
+        "K": ['k', 'c', 'ch', 'cc', 'lk', 'qu', 'ck', 'x'],
+        "L": ['l', 'll'],
+        "M": ['m', 'mm', 'mb', 'mn', 'lm'],
+        "N": ['n', 'nn', 'kn', 'gn', 'pn', 'mn'],
+        "NG": ['ng', 'n', 'ngue', 'ngu', 'ngi', 'ngy', 'ngie'],
+        "OW": ['o', 'oa', 'oe', 'ow', 'ou', 'ough', 'eau'],
+        "OY": ['oi', 'oy', 'o', 'hoi', 'oye', 'oie'],
+        "P": ['p', 'pp'],
+        "R": ['r', 'rr', 'wr', 'rh'],
+        "S": ['s', 'ss', 'c', 'sc', 'ps', 'st', 'ce', 'se'],
+        "SH": ['sh', 'sch', 'ti', 'ci', 'si', 'ch', 'sci'], 
+        "T": ['t', 'tt', 'th', 'ed'],
+        "TH": ['th', 'the', 'tha', 'tho', 'thy'],
+        "UH": ['oo', 'u', 'ou', 'o', 'oe', 'ough', 'ui'],
+        "UW": ['oo', 'u', 'ou', 'o', 'oe', 'ough', 'ui'],
+        "V": ['v', 'f', 'ph', 've', 'ff', 'lf', 'gh'],
+        "W": ['w', 'wh', 'u', 'o', 'ou'],
+        "Y": ['y', 'i', 'j', 'igh', 'ie', 'ye'],
+        "Z": ['z', 'zz', 's', 'ss', 'ze', 'se'],
+        "ZH": ['zh', 'si', 'zi', 's', 'z', 'su', 'se']
+    }
+
+    return phone2LetterMap[phone].includes(letter);
+}
